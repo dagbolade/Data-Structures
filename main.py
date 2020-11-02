@@ -14,6 +14,24 @@ class Node:
  def __str__(self):
   return self.data.__str__()
 
+class Linkedlist:
+  def __init__(self):
+
+    self.first = None
+
+    self.last = None
+
+  def add(self, data):
+    new_node = Node(data)
+    new_node.next = self.first
+    self.first = new_node
+    if self.first is None:
+            self.first = new_node
+            return
+
+
+
+
 n1 = Node("Fred")
 n2 = Node("Tom")
 n3 = Node("David")
